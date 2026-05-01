@@ -203,3 +203,12 @@ __marimo__/
 .claude/
 
 data/
+
+data.zip
+
+jupyter_tf.py
+
+checkpoints/
+
+tflite_models/
+*.tflite

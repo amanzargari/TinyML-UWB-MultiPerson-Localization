@@ -1,0 +1,40 @@
+# ============================================================
+# TinyML UWB Multi-Person Localization - PyTorch dependencies
+# Tested with Python 3.11 / 3.12
+# ============================================================
+
+# --- Core numerics ---
+numpy>=1.26,<3.0
+scipy>=1.11
+
+# --- Deep learning (PyTorch) ---
+# On macOS with Apple Silicon, torch installs natively (MPS support).
+# On Linux/Windows + NVIDIA GPU, install the CUDA build separately:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.4,<2.12
+torchao>=0.6              # PT2E quantization for litert-torch
+
+# --- TFLite conversion (PyTorch -> TFLite) ---
+# litert-torch is the renamed/successor to ai-edge-torch.
+# It depends on tensorflow internally for the TFLite runtime + converter.
+litert-torch>=0.5
+
+# tensorflow is required by litert-torch and used for inspect_tflite()
+# (to count ops in the converted .tflite file).
+# On macOS with Apple Silicon, replace with: tensorflow-macos>=2.18
+tensorflow>=2.18,<2.21
+
+# --- Notebooks ---
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.10
+
+# --- Plotting ---
+matplotlib>=3.8
+
+# --- PDF generation (briefings + training report) ---
+reportlab>=4.0
+Pillow>=10.0
+
+# --- Progress bars ---
+tqdm>=4.66
